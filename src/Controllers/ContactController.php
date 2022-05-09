@@ -1,6 +1,6 @@
 <?php
 
-namespace Khoatran\Unlock\Controller;
+namespace Khoatran\Unlock\Controllers;
 
 class ContactController
 {
@@ -10,6 +10,6 @@ class ContactController
     public function index(): string
     {
         return "This is Contact Controller";
-        
+
     }
 }

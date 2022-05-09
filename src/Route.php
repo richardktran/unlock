@@ -2,7 +2,7 @@
 
 namespace Khoatran\Unlock;
 
-use Khoatran\Unlock\Controller\NotFoundController;
+use Khoatran\Unlock\Controllers\NotFoundController;
 use Khoatran\Unlock\Request\Request;
 
 class Route
@@ -45,7 +45,9 @@ class Route
         if (!$response) {
             echo $notFoundController->index();
         }
-        echo $response;
+
+        print_r($response);
 
     }
 }
+

@@ -1,15 +1,15 @@
 {
-    "name": "khoatran/unlock",
-    "autoload": {
-        "psr-4": {
-            "Khoatran\\Unlock\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Khoa Tran",
-            "email": "khoa.tran@nfq.asia"
-        }
-    ],
-    "require": {}
+  "name": "khoatran/unlock",
+  "autoload": {
+    "psr-4": {
+      "Khoatran\\Unlock\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Khoa Tran",
+      "email": "khoa.tran@nfq.asia"
+    }
+  ],
+  "require": {}
 }
