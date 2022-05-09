@@ -11,7 +11,6 @@ class Movie
     protected array $characters;
     protected string $plot;
     protected int $rating;
-    private \SimpleXMLElement $movies;
 
     /**
      * @return string
@@ -19,7 +18,7 @@ class Movie
     public function getPlot(): string
     {
         return $this->plot;
-        
+
     }
 
     /**
@@ -67,11 +66,11 @@ class Movie
         $xmlMovies = XmlHelper::xml2object('src/Database/movies.xml');
         $movies = [];
         foreach ($xmlMovies as $movie) {
-            $movieData = new Movie();
-            $movieData->title = (string)$movie->title;
-            $movieData->plot = (string)$movie->plot;
-            $movieData->id = (int)$movie->id;
-            $movies[] = $movieData;
+            $movies[] = [
+                'id' => (int)$movie->id,
+                'title' => (string)$movie->title,
+                'plot' => (string)$movie->plot,
+            ];
         }
         return $movies;
 

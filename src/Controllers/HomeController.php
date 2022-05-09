@@ -10,7 +10,7 @@ class HomeController
     {
         $movies = new Movie();
         $moviesData = $movies->getAll();
-        return $moviesData;
+        return json_encode($moviesData);
 
     }
 }

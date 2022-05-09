@@ -12,4 +12,6 @@ class ContactController
         return "This is Contact Controller";
 
     }
+
 }
+
