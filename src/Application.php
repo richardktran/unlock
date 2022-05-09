@@ -1,12 +1,15 @@
 <?php
+
 namespace Khoatran\Unlock;
 
-class Application{
+class Application
+{
     /**
      * @return void
      */
-    public function run():void
+    public function run(): void
     {
         Route::handle();
+        
     }
 }

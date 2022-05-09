@@ -13,8 +13,8 @@ class Route
     protected static array $routes = [];
 
     /**
-     * @param $uri
-     * @param $callback
+     * @param  $uri
+     * @param  $callback
      * @return void
      */
     public static function get($uri, $callback): void
