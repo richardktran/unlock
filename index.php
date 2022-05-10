@@ -7,4 +7,3 @@ use Khoatran\Unlock\Application;
 $app = new Application();
 
 $app->run();
-

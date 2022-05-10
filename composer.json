@@ -11,5 +11,8 @@
       "email": "khoa.tran@nfq.asia"
     }
   ],
-  "require": {}
+  "require": {},
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*"
+  }
 }

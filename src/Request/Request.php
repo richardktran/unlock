@@ -14,7 +14,6 @@ class Request
             return $path;
         }
         return substr($path, 0, strpos($path, '?'));
-        
     }
 
     /**
@@ -23,6 +22,5 @@ class Request
     public function getMethod(): string
     {
         return $_SERVER['REQUEST_METHOD'] ?? 'GET';
-
     }
 }

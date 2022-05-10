@@ -10,8 +10,5 @@ class ContactController
     public function index(): string
     {
         return "This is Contact Controller";
-
     }
-
 }
-

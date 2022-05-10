@@ -6,6 +6,8 @@ use Khoatran\Unlock\Helpers\XmlHelper;
 
 class Movie
 {
+    use XmlHelper;
+
     protected int $id;
     protected string $title;
     protected array $characters;
@@ -18,7 +20,6 @@ class Movie
     public function getPlot(): string
     {
         return $this->plot;
-
     }
 
     /**
@@ -27,7 +28,6 @@ class Movie
     public function getRating(): int
     {
         return $this->rating;
-
     }
 
 
@@ -37,7 +37,6 @@ class Movie
     public function getId(): int
     {
         return $this->id;
-
     }
 
 
@@ -47,7 +46,6 @@ class Movie
     public function getCharacters(): array
     {
         return $this->characters;
-
     }
 
 
@@ -57,13 +55,14 @@ class Movie
     public function getTitle(): string
     {
         return $this->title;
-
     }
 
-
-    public function getAll()
+    /**
+     * @return array
+     */
+    public function getAll(): array
     {
-        $xmlMovies = XmlHelper::xml2object('src/Database/movies.xml');
+        $xmlMovies = $this->xml2object('src/Database/movies.xml');
         $movies = [];
         foreach ($xmlMovies as $movie) {
             $movies[] = [
@@ -73,8 +72,5 @@ class Movie
             ];
         }
         return $movies;
-
     }
-
 }
-

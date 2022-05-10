@@ -2,6 +2,8 @@
 
 namespace Khoatran\Unlock;
 
+use Khoatran\Unlock\Services\ServiceProvider;
+
 class Application
 {
     /**
@@ -10,7 +12,5 @@ class Application
     public function run(): void
     {
         Route::handle();
-
     }
 }
-

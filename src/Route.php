@@ -24,12 +24,11 @@ class Route
             self::$routes['GET'][$uri] = $response;
             return;
         }
-
-        $currenController = (new $callback[0]);
+        $service = new $callback[2]();
+        $currenController = new $callback[0]($service);
         $action = $callback[1];
         $response = $currenController->$action();
         self::$routes['GET'][$uri] = $response;
-
     }
 
     /**
@@ -38,16 +37,15 @@ class Route
     public static function handle(): void
     {
         $request = new Request();
-        $notFoundController = new NotFoundController();
         $path = $request->getPath();
         $method = $request->getMethod();
         $response = self::$routes[$method][$path] ?? false;
         if (!$response) {
+            $notFoundController = new NotFoundController();
             echo $notFoundController->index();
         }
-
+        header('Content-Type: application/json; charset=utf-8');
+        http_response_code(200);
         print_r($response);
-
     }
 }
-
