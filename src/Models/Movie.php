@@ -8,9 +8,10 @@ class Movie
 {
     use XmlHelper;
 
+    const DATABASE_URL = 'src/Database/movies.xml';
+
     protected int $id;
     protected string $title;
-    protected array $characters;
     protected string $plot;
     protected int $rating;
 
@@ -41,15 +42,6 @@ class Movie
 
 
     /**
-     * @return array
-     */
-    public function getCharacters(): array
-    {
-        return $this->characters;
-    }
-
-
-    /**
      * @return string
      */
     public function getTitle(): string
@@ -62,15 +54,22 @@ class Movie
      */
     public function getAll(): array
     {
-        $xmlMovies = $this->xml2object('src/Database/movies.xml');
+        $xmlMovies = $this->xml2object(self::DATABASE_URL);
         $movies = [];
         foreach ($xmlMovies as $movie) {
             $movies[] = [
                 'id' => (int)$movie->id,
                 'title' => (string)$movie->title,
                 'plot' => (string)$movie->plot,
+                'rating' => (string)$movie->rating,
             ];
         }
         return $movies;
+    }
+
+    public function insert($newMovie): bool
+    {
+//        return $this->addData2Xml(self::DATABASE_URL, $newMovie);
+        return true;
     }
 }
