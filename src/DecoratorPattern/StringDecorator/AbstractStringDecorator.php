@@ -6,7 +6,11 @@ use Khoatran\Unlock\DecoratorPattern\StringFormatInterface;
 
 abstract class AbstractStringDecorator implements StringFormatInterface
 {
+    /**
+     * @var StringFormatInterface
+     */
     protected StringFormatInterface $stringWrapped;
+
     public function __construct(StringFormatInterface $stringHelpers)
     {
         $this->stringWrapped = $stringHelpers;
