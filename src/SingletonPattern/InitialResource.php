@@ -13,6 +13,9 @@ class InitialResource
         $token = "fsdf878sgds879hgf8e9r8ds";
     }
 
+    /**
+     * @return InitialResource
+     */
     public static function getInstance(): InitialResource
     {
         if (self::$instance != null) {
