@@ -1,8 +1,9 @@
 <?php
+
 require './vendor/autoload.php';
 
-use Khoatran\Unlock\DecoratorPattern\StringDecorator\WrapInDiv;
-use Khoatran\Unlock\DecoratorPattern\TrimString;
+use Khoatran\Unlock\Decorator\StringDecorator\WrapInDiv;
+use Khoatran\Unlock\Decorator\TrimString;
 
 $string = "      Hello, My name is Khoa         ";
 

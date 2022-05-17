@@ -1,5 +1,5 @@
 <?php
 
-use Khoatran\Unlock\SingletonPattern\InitialResource;
+use Khoatran\Unlock\Singleton\InitialResource;
 
 $initData = InitialResource::$instance;

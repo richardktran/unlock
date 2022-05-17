@@ -1,6 +1,6 @@
 <?php
 
-namespace Khoatran\Unlock\SingletonPattern;
+namespace Khoatran\Unlock\Singleton;
 
 class InitialResource
 {

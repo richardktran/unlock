@@ -1,6 +1,6 @@
 <?php
 
-namespace Khoatran\Unlock\DecoratorPattern\StringDecorator;
+namespace Khoatran\Unlock\Decorator\StringDecorator;
 
 class WrapInSpan
 {

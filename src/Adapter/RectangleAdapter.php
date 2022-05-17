@@ -1,15 +1,15 @@
 <?php
 
-namespace Khoatran\Unlock\AdapterPattern;
+namespace Khoatran\Unlock\Adapter;
 
-class Circle implements ShapeInterface
+class RectangleAdapter implements ShapeInterface
 {
     /**
      * @return string
      */
     public function draw(): string
     {
-        return "Draw circle";
+        return "Draw rectangle";
     }
 
     /**
@@ -17,6 +17,6 @@ class Circle implements ShapeInterface
      */
     public function resize(): string
     {
-        return "Resize circle";
+        return "Resize rectangle";
     }
 }

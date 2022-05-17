@@ -1,6 +1,6 @@
 <?php
 
-namespace Khoatran\Unlock\AdapterPattern;
+namespace Khoatran\Unlock\Adapter;
 
 interface ShapeInterface
 {

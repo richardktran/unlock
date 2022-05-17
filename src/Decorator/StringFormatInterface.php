@@ -1,6 +1,6 @@
 <?php
 
-namespace Khoatran\Unlock\DecoratorPattern;
+namespace Khoatran\Unlock\Decorator;
 
 interface StringFormatInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Khoatran\Unlock\AdapterPattern;
+namespace Khoatran\Unlock\Adapter;
 
-class Drawing
+class DrawingAdapter
 {
     /**
      * @var ShapeInterface

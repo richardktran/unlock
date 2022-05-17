@@ -1,8 +1,8 @@
 <?php
 
-namespace Khoatran\Unlock\DecoratorPattern\StringDecorator;
+namespace Khoatran\Unlock\Decorator\StringDecorator;
 
-use Khoatran\Unlock\DecoratorPattern\StringFormatInterface;
+use Khoatran\Unlock\Decorator\StringFormatInterface;
 
 abstract class AbstractStringDecorator implements StringFormatInterface
 {

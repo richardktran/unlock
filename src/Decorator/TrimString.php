@@ -1,8 +1,8 @@
 <?php
 
-namespace Khoatran\Unlock\DecoratorPattern;
+namespace Khoatran\Unlock\Decorator;
 
-class UppercaseString implements StringFormatInterface
+class TrimString implements StringFormatInterface
 {
     /**
      * @param string $text
@@ -10,6 +10,6 @@ class UppercaseString implements StringFormatInterface
      */
     public function transform(string $text): string
     {
-        return strtoupper($text);
+        return trim($text);
     }
 }

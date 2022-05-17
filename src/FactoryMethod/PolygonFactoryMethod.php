@@ -2,8 +2,12 @@
 
 namespace Khoatran\Unlock\FactoryMethod;
 
-class PolygonFactory
+class PolygonFactoryMethod
 {
+    /**
+     * @param int $numberOfSides
+     * @return PolygonInterface
+     */
     public function getPolygon(int $numberOfSides): PolygonInterface
     {
         if ($numberOfSides === 3) {
