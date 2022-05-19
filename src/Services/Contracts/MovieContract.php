@@ -4,5 +4,7 @@ namespace Khoatran\Unlock\Services\Contracts;
 
 interface MovieContract
 {
-    public function getAllMovie(): array;
+    public function getAllMovies(): array;
+
+    public function storeMovie(array $movieData): false|array;
 }

@@ -23,4 +23,12 @@ class Request
     {
         return $_SERVER['REQUEST_METHOD'] ?? 'GET';
     }
+
+    /**
+     * @return array
+     */
+    public function getBody(): array
+    {
+        return $_POST;
+    }
 }
